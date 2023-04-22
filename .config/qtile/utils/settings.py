@@ -39,8 +39,8 @@ workspace_names = [
 ]
 
 # general
-wallpaper_main = "/home/lukka/Imagens/wallpapers/dark/dark_girl_blue.png"
-wallpaper_sec = "/home/lukka/Imagens/wallpapers/justblack.jpg"
+wallpaper_main = "/home/hacko/Imagens/wallpapers/dark/dark_girl_blue.png"
+wallpaper_sec = "/home/hacko/Imagens/wallpapers/justblack.jpg"
 
 # misc
 network = "enp3s0"  # network interface name

@@ -1,7 +1,7 @@
 #!/bin/fish
 
 # ─────────── 《 Aliases 》 ───────────
-alias htb='bash /home/lukka/reaper.sh ; cd /home/lukka/0x/targets/htb'
+alias htb='bash /home/hacko/reaper.sh ; cd /home/lukka/0x/targets/htb'
 alias lks='python3 /home/lukka/0x/tools/lukkash/lukkash.py'
 
 # ──────── 《 Abbreviations 》 ────────
@@ -14,7 +14,7 @@ abbr -a null "2>/dev/null"
 
 # ────────── 《 Functions 》 ──────────
 function expsrv # Starting exploit server
-  set path /home/lukka/0x/tools/srvexpl/
+  set path /home/hacko/0x/tools/srvexpl/
   set vpn $(ifconfig tun0 | grep 'inet.*10.10' | awk '{print $2}')  
   echo "wget http://$vpn/"
   sudo python3 -m http.server 80 -d $path

@@ -1,19 +1,21 @@
 #!/bin/fish
-#     _         _ _          _   _    _        
-#  __| |_____ _(_) |__ _ ___| |_| |_ (_)___ ___
-# / _` / -_) V / | / _` / _ \  _| ' \| / -_|_-<
-# \__,_\___|\_/|_|_\__, \___/\__|_||_|_\___/__/
-#                  |___/                       
+#  _   _    _    ____ _  _____  ____    _    _   _
+# | | | |  / \  / ___| |/ / _ \/ ___|  / \  | \ | |
+# | |_| | / _ \| |   | ' / | | \___ \ / _ \ |  \| |
+# |  _  |/ ___ \ |___| . \ |_| |___) / ___ \| |\  |
+# |_| |_/_/   \_\____|_|\_\___/|____/_/   \_\_| \_|
+
 # lukka@devilgothies
-# Check my Github -> https://github.com/devilgothies
+# Check out devilgothies home repo -> https://github.com/devilgothies
+# my fork -> https://github.com/HACKOSAN/qtile-dotfiles
 # This is just my fish config, enjoy!
 
 # Sourcing my infosec stuff configs
-source /home/lukka/.config/fish/cyber.fish
+source /home/hacko/.config/fish/cyber.fish
 
 # Environment
 set fish_greeting
-set -x PATH /home/lukka/.local/bin/ /home/lukka/go/bin $PATH
+set -x PATH /home/hacko/.local/bin/ /home/lukka/go/bin $PATH
 
 # ──────── 《 Abbreviations 》 ────────
 abbr ifc ifconfig
@@ -57,13 +59,8 @@ alias b='bash'
 alias z='zsh'
 alias f='fish'
 
-# Virtual box 
-alias vm='VBoxManage'
-alias vmlv='VBoxManage list vms'
-alias vmlrv='VBoxManage list runningvms'
-
 # Changing keyboard layout
-alias setbr='setxkbmap -layout br'
+alias setar='setxkbmap -layout ar'
 alias setus='setxkbmap -layout us'
 
 # Human readability
@@ -71,30 +68,11 @@ alias df='df -h'
 alias free='free -h'
 
 # Fast edit/read configs
-alias pfg='cd /home/lukka/.config/'
-alias i3conf='nvim /home/lukka/.config/i3/config'
 alias qtileconf='nvim /home/lukka/.config/qtile/config.py'
-alias awconf='nvim /home/lukka/.config/awesome/rc.lua'
-alias config='cat /home/lukka/.config/fish/config.fish /home/lukka/.config/fish/cyber.fish'
-
-# Grep
-alias grep='grep --color=auto'
-alias egrep='egrep --color=auto'
-alias fgrep='fgrep --color=auto'
-alias gp='grep'
-alias hg='history | grep $1'
-
-# Networking tools
-alias ifme='curl ifconfig.me'
-alias ssp='ss -tupan | grep $1'
-alias nethogs='sudo nethogs'
-alias iftop='sudo iftop'
-alias mm='mitmproxy'
 
 # Visual configs
 alias panes='/opt/shell-color-scripts/colorscripts/panes'
 alias fehbgr='feh --bg-fill $(shuf -n 1 -e /home/lukka/Imagens/wallpapers/*)'
-alias frenzch='/home/lukka/frenzch.sh/frenzch.sh'
 alias clock='tty-clock -c -C4'
 
 # "ls" to "exa"
@@ -103,10 +81,6 @@ alias l='exa --color=always --group-directories-first'
 alias la='exa -la --color=always --group-directories-first'
 alias ll='exa -lah --color=always --group-directories-first'
 alias lt='exa -aT --color=always --group-directories-first'
-alias l.='exa -a | grep -E "^\."'
-alias lah='exa -lah --color=always --group-directories-first'
-alias lsiso='ls -lh *.iso'
-alias lsize='du -hs * | sort -hr | less'
 
 # Package managers
 alias pacs='sudo pacman -S'
@@ -115,14 +89,7 @@ alias pacsyyu='sudo pacman -Syyu'
 alias ys='yay -S'
 alias yaysua='yay -Sua --noconfirm'
 alias yaysyu='yay -Syu --noconfirm'
-alias parsua='paru -Sua --noconfirm'
-alias parsyu='paru -Syu --noconfirm'
-alias pt='pactree'
-alias ptc='pactree -c'
-alias ptr='pactree -rc'
-alias ptu='pactree -u'
 
-# Processes
 alias psa='ps auxf'
 alias psgrep="ps aux | grep -v grep | grep -i -e VSZ -e"
 alias psmem='ps auxf | sort -nr -k 4'
@@ -133,21 +100,6 @@ alias next='playerctl next'
 alias prev='playerctl previous'
 alias pp='playerctl play-pause'
 
-# Systemd
-alias std='sudo systemctl start'
-alias rrd='sudo systemctl restart'
-alias stopd='sudo systemctl stop'
-alias stts='systemctl status'
-alias isfd='systemctl is-failed'
-
-# Virtual Box
-alias vmoff='VBoxManage controlvm $1 acpipowerbutton'
-alias vmforceoff='VBoxManage controlvm $1 poweroff'
-alias vmstart='VBoxManage startvm $1 --type separate'
-alias vmstarth='VBoxManage startvm $1 --type headless'
-
-# Logging
-alias lastjctl='journalctl -p 3 -xb'
 
 # ────────── 《 Functions 》 ──────────
 function extract
